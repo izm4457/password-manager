@@ -1,14 +1,18 @@
 {
   "name": "password-manager",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "icons": "node scripts/generate-icons.js",
+    "icons:macos": "bash scripts/generate-icns.sh",
+    "icons:windows": "node scripts/generate-ico.js",
+    "icons:all": "pnpm icons && pnpm icons:macos && pnpm icons:windows"
   },
   "dependencies": {
     "@tauri-apps/plugin-dialog": "^2.4.2",
