@@ -3,6 +3,13 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "description": "Secure local password manager built with Tauri and React",
+  "author": "maromiya",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/izm4457/password-manager.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
