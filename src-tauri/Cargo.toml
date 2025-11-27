@@ -31,3 +31,11 @@ tauri-plugin-dialog = "2.4.2"
 tauri-plugin-shell = "2"
 secrecy = { version = "0.8", features = ["serde"] }
 zeroize = "1.8.2"
+
+[profile.release]
+# バイナリサイズを最小化
+strip = true          # デバッグシンボルを削除
+opt-level = "z"       # サイズ最適化
+lto = true            # Link Time Optimization
+codegen-units = 1     # 並列コンパイルを無効化してサイズ削減
+panic = "abort"       # パニック時のスタック巻き戻しを無効化
